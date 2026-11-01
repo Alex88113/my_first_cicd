@@ -29,8 +29,11 @@ jobs:
           pip install -r requirements.txt
           pip install -r requirements-testing.txt
 
+      - name: Install Ruff
+        run: pip install ruff
+
       - name: Run ruff Linter
-        run: ruff check .
+        run: ruff check . --output-format=github
 
       - name: Run tests
         run: pytest tests/ -v
