@@ -1,9 +1,7 @@
-name: CI for project
+name: CI for Static WebSite
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
     branches: [ main ]
 
 jobs:
@@ -14,8 +12,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Say Hello
-        run: echo "Hello, Github Actions! this is my first workflow!"
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python_version: '3.13'
 
-      - name: Show date
-        run: date
+      - name: Run tests
+        run: python test.py
