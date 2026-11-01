@@ -31,3 +31,9 @@ jobs:
 
       - name: Run tests
         run: pytest tests/ -v
+        env:
+           PSQL_USER: ${{ secrets.PSQL_USER }}
+           PSQL_PASSWORD: ${{ secrets.PSQL_PASSWORD }}
+           PSQL_PORT: ${{ secrets.PSQL_PORT }}
+           PSQL_HOST: ${{ secrets.PSQL_HOST }}
+           DATABASE_PATH: ${{ secrets.DATABASE_PATH }}
