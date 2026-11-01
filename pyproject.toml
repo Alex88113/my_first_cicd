@@ -1,0 +1,29 @@
+[project]
+name = "my-first-cicd"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Shurik", email = "sanya.kucheryavvkh@bk.ru" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.162.0",
+    "httpx>=0.28.1",
+    "loguru>=0.7.3",
+    "pydantic>=2.14.2",
+    "pydantic-settings>=2.16.2",
+    "respx>=0.23.1",
+    "uvicorn>=0.54.0",
+]
+
+[project.scripts]
+my-first-cicd = "my_first_cicd:main"
+
+[build-system]
+requires = ["uv_build>=0.12.19,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
