@@ -1,0 +1,41 @@
+# Git и CI
+.git/
+.github/
+
+# Окружение и секреты
+.env
+.env.*
+.venv/
+venv/
+env/
+
+# Python-кэши и артефакты
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Тесты и кэши инструментов (не нужны в рантайме)
+tests/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# IDE и ОС
+.idea/
+.vscode/
+.DS_Store
+
+# Docker/Compose файлы (не нужны внутри образа)
+Dockerfile
+.dockerignore
+docker-compose*.yml
+
+# Логи и локальные данные
+*.log
+logs/
+*.db
+*.sqlite3
