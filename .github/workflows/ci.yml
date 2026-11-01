@@ -35,7 +35,7 @@ jobs:
       - name: Run ruff Linter
         run: |
           ruff check . --output-format=github
-          ruff format .
+          ruff check --fix .
 
       - name: Run tests
         run: pytest tests/ -v
