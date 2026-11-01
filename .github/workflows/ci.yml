@@ -33,7 +33,9 @@ jobs:
         run: pip install ruff
 
       - name: Run ruff Linter
-        run: ruff check . --output-format=github
+        run: |
+          ruff check . --output-format=github
+          ruff format .
 
       - name: Run tests
         run: pytest tests/ -v
